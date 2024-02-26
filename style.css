@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main img{
+    height: 650px;
+    width: 450px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+    top: 4%;
+}
+#scroll-div{
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+ #scroll-div::-webkit-scrollbar{
+    display: none;
+ }
+#scroll-div h1{
+    display: inline-block;
+    font-size: 140px;
+    font-family:Impact'Arial Narrow Bold' sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 3.5px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#scroll-div2{
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    z-index: 100;
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+ #scroll-div2::-webkit-scrollbar{
+    display: none;
+ }
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 140px;
+    font-family:Impact 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    color: transparent;
+    letter-spacing: 3.5px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-direction: reverse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+#scroll-div3{
+    position: absolute;
+    top: 64%;
+    width: 100%;
+    
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+ #scroll-div3::-webkit-scrollbar{
+    display: none;
+ }
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 140px;
+    font-family:Impact 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 3.5px;
+    
+    animation-name: scroll;
+    
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#text{
+    font-size: 22px;
+    position: absolute;
+    width: 75%;
+    z-index: 101;
+   
+    font-family:sans-serif;
+    text-align: center;
+    top: 13%;
+    text-transform: uppercase;
+}
+@keyframes scroll{
+    0%{
+
+transform: translateX(calc(-100% - 32px));
+    }
+    
+    100%{
+        transform: translateX(0);
+    }
+}
+#main img{
+    transition: all ease-in-out;
+}
+ #main img:hover{
+    transform: translate3d(12,12,12);
+}
